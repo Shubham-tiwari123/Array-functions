@@ -89,9 +89,7 @@ void ArrayOperations::addElement() {
 
 void ArrayOperations::reverseArray() {
     cout<<"\nReversing the whole array:-";
-    int temp;
-    int start=0;
-    int end = num-1;
+    end = num-1;
     while (start < end){
         temp = A[start];   
         A[start] = A[end];
@@ -101,8 +99,7 @@ void ArrayOperations::reverseArray() {
     }   
 }
 
-void ArrayOperations::sortArrayWaveForm() {
-    int temp;
+void ArrayOperations::sortArrayWaveForm(){
     cout<<"\nSorting array in wave form:-";
     sort(A,A+num);
     for(i=0;i<num-1;i+=2){
@@ -122,4 +119,21 @@ void ArrayOperations::sortArrayAbsoluteDifference() {
     i=0;
     for(it = m.begin();it!=m.end();it++)
         A[i++] = it->second;
+}
+
+void ArrayOperations::threeWayPartition() {
+    cout<<"\nEnter the hight and low value:-";
+    cin>>high>>low;
+   // int B[num];
+    end = num-1;
+    for (int i=0; i<=end;){
+        if (A[i]<low)
+            swap(A[i++], A[start++]);
+ 
+        else if (A[i]>high)
+            swap(A[i], A[end--]);
+ 
+        else
+            i++;
+    }
 }
