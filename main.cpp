@@ -7,9 +7,10 @@ int main() {
     a.diplayData();
     a.arrayRotate();
     a.diplayData();
-   // a.arrayCylicRotation();
-   // a.diplayData();
+    a.arrayCylicRotation();
+    a.diplayData();
     a.searchElement();
+    a.addElement();
     return 0;
 }
 
