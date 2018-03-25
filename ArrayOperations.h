@@ -14,6 +14,9 @@ public:
     void arrayCylicRotation();
     void searchElement();
     void addElement();
+    void reverseArray();
+    void sortArrayWaveForm();
+    void sortArrayAbsoluteDifference();
 };
 
 #endif /* ARRAYOPERATIONS_H */
