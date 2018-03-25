@@ -55,14 +55,33 @@ void ArrayOperations::searchElement() {
             mid= mid+num-1;
             mid = mid/2;
         }
-        else if(key >= A[mid] && key >= A[num-1]){
+       /* else if(key >= A[mid] && key >= A[num-1]){
             cout<<"yo men";
-           // mid= mid+1;
+            mid= mid+1;
             mid = mid/2;
-        }
+        }*/
     }
     if(A[mid] == key){
         cout<<"Key found at position:"<<mid;
     }
+}
+
+void ArrayOperations::addElement() {
+    cout<<"\nEnter the sum value:-";
+    cin>>element;
+    for(i=0;i<num;i++){
+        for(j=i+1;j<num;j++){
+            sum = A[i]+A[j];
+            if(sum == element){
+                cout<<"pair present:-"<<A[i]<<","<<A[j];
+                flag=1;
+                break;
+            }
+        }
+        if(flag==1)
+            break;
+    }
+    if(flag ==0)
+        cout<<"Pair not found.";
 }
 
