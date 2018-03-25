@@ -20,3 +20,6 @@ Array Functions:-
 
 
 7)  Sort an array according to absolute difference with given value
+
+
+8)  Three way partitioning of an array around a given range
