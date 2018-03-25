@@ -1,4 +1,6 @@
 #include <iostream>
+#include <algorithm>
+#include <map>
 #include "ArrayOperations.h"
 using namespace std;
 
@@ -85,3 +87,39 @@ void ArrayOperations::addElement() {
         cout<<"Pair not found.";
 }
 
+void ArrayOperations::reverseArray() {
+    cout<<"\nReversing the whole array:-";
+    int temp;
+    int start=0;
+    int end = num-1;
+    while (start < end){
+        temp = A[start];   
+        A[start] = A[end];
+        A[end] = temp;
+        start++;
+        end--;
+    }   
+}
+
+void ArrayOperations::sortArrayWaveForm() {
+    int temp;
+    cout<<"\nSorting array in wave form:-";
+    sort(A,A+num);
+    for(i=0;i<num-1;i+=2){
+        temp = A[i];
+        A[i] = A[i+1];
+        A[i+1]=temp;
+    }
+}
+
+void ArrayOperations::sortArrayAbsoluteDifference() {
+    multimap<int,int>m;
+    multimap<int,int>::iterator it;
+    cout<<"\nEnter the number for absolute difference:-";
+    cin>>element;
+    for(i = 0;i<num;i++)
+        m.insert(make_pair(abs(element-A[i]),A[i]));
+    i=0;
+    for(it = m.begin();it!=m.end();it++)
+        A[i++] = it->second;
+}
